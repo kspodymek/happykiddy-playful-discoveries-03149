@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { BookOpen, Gamepad2, Sparkles, ExternalLink, PencilRuler } from "lucide-react";
-import booksImage from "@/assets/books-category.jpg";
-import gamesImage from "@/assets/games-category.jpg";
-import stickersImage from "@/assets/stickers-category.jpg";
-import schoolSuppliesImage from "@/assets/school-supplies-category.jpg";
+import booksImage from "@/assets/products-books-nostalgic.jpg";
+import gamesImage from "@/assets/products-games-nostalgic.jpg";
+import stickersImage from "@/assets/products-stickers-nostalgic.jpg";
+import schoolSuppliesImage from "@/assets/products-supplies-nostalgic.jpg";
 
 const products = [
   {

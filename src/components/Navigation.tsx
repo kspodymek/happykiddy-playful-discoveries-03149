@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { UserMenu } from "./UserMenu";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +28,7 @@ export function Navigation() {
     { id: "story", label: "Nasza Historia" },
     { id: "products", label: "Produkty" },
     { id: "activity", label: "Pomysł Dnia" },
+    { id: "blog", label: "Blog" },
     { id: "why-us", label: "Dlaczego My?" },
     { id: "contact", label: "Kontakt" },
   ];
@@ -57,6 +59,7 @@ export function Navigation() {
                 {item.label}
               </button>
             ))}
+            <UserMenu />
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,6 +85,9 @@ export function Navigation() {
                 {item.label}
               </button>
             ))}
+            <div className="px-4 pt-3">
+              <UserMenu />
+            </div>
           </div>
         )}
       </div>

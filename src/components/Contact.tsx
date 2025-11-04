@@ -33,23 +33,7 @@ export function Contact() {
               <Instagram className="h-6 w-6" />
               <span className="font-medium">Instagram</span>
             </a>
-            
-            <span className="text-muted-foreground">|</span>
-            
-            <a
-              href="https://www.facebook.com/happykiddy.pl"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-lg text-foreground hover:text-primary transition-colors"
-            >
-              <Facebook className="h-6 w-6" />
-              <span className="font-medium">Facebook</span>
-            </a>
           </div>
-
-          <p className="mt-6 text-sm text-muted-foreground italic">
-            (wkrótce!)
-          </p>
         </div>
       </div>
     </section>

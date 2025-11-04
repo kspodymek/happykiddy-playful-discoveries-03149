@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
-import activityImage from "@/assets/activity-fun-vibrant.jpg";
+import activityImage from "@/assets/activity-nostalgic.jpg";
 
 const activities = [
   "Teatrzyk z pluszakami – nowe przedstawienie co 10 minut! 🧸",

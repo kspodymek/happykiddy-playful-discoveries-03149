@@ -6,6 +6,8 @@ import { Story } from "@/components/Story";
 import { Products } from "@/components/Products";
 import { ProductGallery } from "@/components/ProductGallery";
 import { ActivityGenerator } from "@/components/ActivityGenerator";
+import { Blog } from "@/components/Blog";
+import { Newsletter } from "@/components/Newsletter";
 
 import { WhyUs } from "@/components/WhyUs";
 import { FAQ } from "@/components/FAQ";
@@ -39,6 +41,10 @@ const Index = () => {
       <div className="scroll-fade-in">
         <FAQ />
       </div>
+      <div className="scroll-fade-in">
+        <Blog />
+      </div>
+      <Newsletter />
       <Contact />
       <Footer />
       <StickyCTA />

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/hero-nostalgic.jpg";
 
 export function Hero() {
   return (
@@ -11,12 +11,12 @@ export function Hero() {
         loading="eager"
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-secondary/40 via-accent/40 to-background/95" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 via-accent/20 to-background/80" />
 
       <div className="container mx-auto px-4 relative z-10 text-center animate-fade-in-up">
         <div className="bg-background/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 inline-block">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground drop-shadow-lg">
-            Zamiast nudy – <span className="text-primary drop-shadow-md">HappyKiddy!</span> 🎨
+            Zamiast nudy – <span className="text-primary drop-shadow-md">HappyKiddy!</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-foreground font-semibold max-w-3xl mx-auto drop-shadow-md">
