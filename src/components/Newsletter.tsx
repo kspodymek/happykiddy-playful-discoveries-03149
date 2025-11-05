@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { Mail } from "lucide-react";
+import { z } from "zod";
+
+const emailSchema = z.string().trim().email("Nieprawidłowy adres email").max(255, "Email może mieć maksymalnie 255 znaków");
 
 export function Newsletter() {
   const [email, setEmail] = useState("");
@@ -12,6 +15,21 @@ export function Newsletter() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate email
+    try {
+      emailSchema.parse(email);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast({
+          variant: "destructive",
+          title: "Błąd walidacji",
+          description: error.errors[0].message,
+        });
+      }
+      return;
+    }
+    
     setIsLoading(true);
 
     const { data: { user } } = await supabase.auth.getUser();
