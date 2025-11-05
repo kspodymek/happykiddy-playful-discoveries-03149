@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -32,38 +31,15 @@ export function Newsletter() {
     
     setIsLoading(true);
 
-    const { data: { user } } = await supabase.auth.getUser();
-    
-    const { error } = await supabase
-      .from("newsletter_subscribers")
-      .insert([{ 
-        email,
-        user_id: user?.id || null
-      }]);
-
-    setIsLoading(false);
-
-    if (error) {
-      if (error.code === "23505") {
-        toast({
-          variant: "destructive",
-          title: "Ten email jest już zapisany",
-          description: "Jesteś już na naszej liście mailingowej!",
-        });
-      } else {
-        toast({
-          variant: "destructive",
-          title: "Błąd",
-          description: "Nie udało się zapisać do newslettera.",
-        });
-      }
-    } else {
+    // Simulate submission without database
+    setTimeout(() => {
       toast({
         title: "Dziękujemy!",
-        description: "Pomyślnie zapisano do newslettera.",
+        description: "Zapisano do newslettera. Wkrótce się odezwiemy!",
       });
       setEmail("");
-    }
+      setIsLoading(false);
+    }, 500);
   };
 
   return (

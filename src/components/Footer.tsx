@@ -1,4 +1,4 @@
-import { ExternalLink, Mail } from "lucide-react";
+import { ExternalLink, Mail, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
@@ -25,6 +25,18 @@ export function Footer() {
           >
             <ExternalLink className="h-4 w-4" />
             Kup na Allegro
+          </a>
+          
+          <span className="text-muted-foreground">|</span>
+          
+          <a
+            href="https://www.facebook.com/happykiddy.pl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-foreground hover:text-primary transition-colors font-medium"
+          >
+            <Facebook className="h-4 w-4" />
+            Facebook
           </a>
           
           <span className="text-muted-foreground">|</span>
