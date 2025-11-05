@@ -14,9 +14,14 @@ export function Newsletter() {
     e.preventDefault();
     setIsLoading(true);
 
+    const { data: { user } } = await supabase.auth.getUser();
+    
     const { error } = await supabase
       .from("newsletter_subscribers")
-      .insert([{ email }]);
+      .insert([{ 
+        email,
+        user_id: user?.id || null
+      }]);
 
     setIsLoading(false);
 
